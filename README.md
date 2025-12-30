@@ -5,9 +5,8 @@ nvm install 16; nvm use 16;
 GOPROXY=direct go get github.com/ttm62/mexc-sdk@latest
 ```
 
-# mexc-api-sdk
+# mexc-api-sdk mirror for go
 
- MEXC Official Market and trade api sdk, easy to connection and send request to MEXC open api !
 ## Table of APIS
   - [Init](#init)
   - [Market](#market)
@@ -34,19 +33,12 @@ GOPROXY=direct go get github.com/ttm62/mexc-sdk@latest
     - [Account Information](#account-information)
     - [Account Trade List](#account-trade-list)
 ## Init
-```javascript
-//Javascript
-import * as Mexc from 'mexc-sdk';
-const apiKey = 'apiKey'
-const apiSecret = 'apiSecret'
-const client = new Mexc.Spot(apiKey, apiSecret);
-```
 ```go
 // Go
 package main
 import (
 	"fmt"
-	"mexc-sdk/mexcsdk"
+	mexcsdk "github.com/ttm62/mexc-sdk"
 )
 
 func main() {
@@ -55,41 +47,13 @@ func main() {
 	client := mexcsdk.NewSpot(&apiKey, &apiSecret)
 }
 ```
-```python
-# python
-from mexc_sdk import Spot
-client = Spot(api_key='apiKey', apiSecret='apiSecret')
-```
-```java
-// java
-import Mexc.Sdk.*;
-class MyClass {
-  public static void main(String[] args) {
-    String apiKey= "apiKey";
-    String apiSecret= "apiSecret";
-    Spot client = new Spot(apiKey, apiSecret);
-  }
-}
-```
-```C#
-// dotnet
-using System;
-using System.Collections.Generic;
-using Mxc.Sdk;
 
-namespace dotnet
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            string  apiKey = "apiKey";
-            string  apiSecret= "apiSecret";
-            var client = new Spot(apiKey, apiSecret);
-        }
-    }
-}
-
+```javascript
+//Javascript
+import * as Mexc from 'mexc-sdk';
+const apiKey = 'apiKey'
+const apiSecret = 'apiSecret'
+const client = new Mexc.Spot(apiKey, apiSecret);
 ```
 
 ## Market
