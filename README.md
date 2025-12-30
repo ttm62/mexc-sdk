@@ -1,3 +1,7 @@
+# install
+
+GOPROXY=direct go get github.com/ttm62/mexc-sdk@latest
+
 # mexc-api-sdk
 
  MEXC Official Market and trade api sdk, easy to connection and send request to MEXC open api !
