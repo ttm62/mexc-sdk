@@ -1,6 +1,9 @@
-# install
+# Install
 
+```bash
+nvm install 16; nvm use 16;
 GOPROXY=direct go get github.com/ttm62/mexc-sdk@latest
+```
 
 # mexc-api-sdk
 
@@ -49,13 +52,13 @@ import (
 func main() {
 	apiKey := "apiKey"
 	apiSecret := "apiSecret"
-	spot := mexcsdk.NewSpot(apiKey, apiSecret)
+	client := mexcsdk.NewSpot(&apiKey, &apiSecret)
 }
 ```
 ```python
 # python
 from mexc_sdk import Spot
-spot = Spot(api_key='apiKey', apiSecret='apiSecret')
+client = Spot(api_key='apiKey', apiSecret='apiSecret')
 ```
 ```java
 // java
@@ -64,7 +67,7 @@ class MyClass {
   public static void main(String[] args) {
     String apiKey= "apiKey";
     String apiSecret= "apiSecret";
-    Spot mySpot = new Spot(apiKey, apiSecret);
+    Spot client = new Spot(apiKey, apiSecret);
   }
 }
 ```
@@ -82,7 +85,7 @@ namespace dotnet
         {
             string  apiKey = "apiKey";
             string  apiSecret= "apiSecret";
-            var spot = new Spot(apiKey, apiSecret);
+            var client = new Spot(apiKey, apiSecret);
         }
     }
 }
